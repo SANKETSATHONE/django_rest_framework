@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charse="UTF-8">
+    <title>Crus Product</title>
+</head>
+<body>
+<h1><center>{{message}}</center></h1>
+<center><input type="submit" value="Add product" onclick="window.location='/products/save/';"></center>
+<table border="2">
+    <thead>
+    <th>Product ID</th>
+    <th>Product Name</th>
+    <th>Product Brand</th>
+    <th>Product Price</th>
+    <th>Product qty</th>
+    <th>Purchase Date</th>
+    <th>Delivery</th>
+    </thead>
+    {% if all_products %}
+    {%for product in all_products%}
+    <tbody>
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.brand}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.qty}}</td>
+    <td>{{product.purchase_date}}</td>
+    <td>{{product.delivery}}</td>
+    <td><a href="/products/edit/{{product.id}}">Edit</a>
+    <a href="/products/delete/{{product.id}}">Delete</a>
+
+    </td>
+
+    </tbody>
+    {% endfor %}
+    {% endif %}
+</table>
+
+</body>
+</html>

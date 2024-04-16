@@ -1,0 +1,28 @@
+makemigrations -- create migration file this will check for every app inside django
+and if there is chanage in apps it will reflect in migration file
+
+migrate - create table in databse.it will apply all migration apps including exising apps
+this command will refer our migrateion file
+
+django auto apply primary_key which has name id
+
+django request response cycle
+wsgi --- webserver gateway interface, interface between our appication and internet
+
+middlewear -- request process
+
+url resolution -- if request process is proper it goes to url resolutin
+
+view --
+
+manager--
+
+database--
+
+wsgi--
+
+
+every view in django has request as parent class
+
+def ine route in url file
+
